@@ -121,7 +121,7 @@ Botones
 
 .btn-primary {
     background-color: var(--purple);
-    border: none;
+    border-radius: 5px;
     padding: 12px 25px;
     color: white;
     cursor: pointer;
@@ -134,13 +134,18 @@ Botones
 }
 
 .btn-secondary {
-    background: transparent;
-    border: 1px solid var(--purple);
+    background-color: var(--purple);
+    border-radius: 5px;
     padding: 12px 25px;
-    color: var(--purple);
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
 }
 
+.btn-secondary:hover {
+    background-color: var(--purple-hover);
+}
 /* ========
 Imagen Hero
 ======== */
@@ -326,4 +331,14 @@ Nuevos estilos: Contacto y Social
     background-color: var(--purple);
     color: white;
     transition: 0.3s;
+}
+.save-btn {
+  background: rgb(22, 53, 95)0;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 1px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
 }
