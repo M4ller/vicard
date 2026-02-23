@@ -183,10 +183,19 @@ Cursos
 
 .course-card {
     background-color: var(--bg-secondary);
-    padding: 30px;
     width: 280px;
     border-radius: 10px;
     transition: 0.3s;
+    overflow: hidden;
+}
+
+.course-card img {
+    width: 100%;
+    display: block;
+}
+
+.course-card-content {
+    padding: 30px;
 }
 
 .course-card:hover {
