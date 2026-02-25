@@ -1,0 +1,344 @@
+/* ========
+Variables globales de color
+======== */
+:root {
+    --bg-dark: #0f0f14;
+    --bg-secondary: #181820;
+    --purple: #2979FF;
+    --purple-hover: #1565C0;
+    --text-light: #ffffff;
+    --text-gray: #b3b3b3;
+}
+
+/* ========
+Reset básico
+======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========
+Estilo general del body
+======== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* ========
+Header
+======== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--bg-secondary);
+}
+
+/* ========
+Logo
+======== */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+/* ========
+Navegación
+======== */
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-gray);
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--purple);
+}
+
+/* ========
+Botón hamburguesa
+======== */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ========
+Hero Section
+======== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 40px;
+}
+
+/* ========
+Contenido Hero
+======== */
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    color: var(--purple);
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+/* ========
+Botones
+======== */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--purple);
+    border-radius: 5px;
+    padding: 12px 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--purple-hover);
+}
+
+.btn-secondary {
+    background-color: var(--purple);
+    border-radius: 5px;
+    padding: 12px 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--purple-hover);
+}
+/* ========
+Imagen Hero
+======== */
+.hero-image img {
+    width: 350px;
+    border-radius: 500px;
+}
+
+/* ========
+Sección estadísticas
+======== */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 8%;
+    background-color: var(--bg-secondary);
+}
+
+.stat-box h2 {
+    color: var(--purple);
+    font-size: 32px;
+}
+
+/* ========
+Cursos
+======== */
+.courses {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.course-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--purple);
+}
+
+.course-card button {
+    margin-top: 20px;
+    background-color: var(--purple);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ========
+Footer
+======== */
+.footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #111;
+    color: var(--text-gray);
+}
+
+/* ========
+Responsive - Tablet y móvil
+======== */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+/* ========
+Responsive - móvil pequeño
+======== */
+@media (max-width: 600px) {
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--bg-secondary);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+/* ======== 
+Nuevos estilos: Contacto y Social 
+======== */
+
+.contact-section {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: var(--bg-dark);
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    border-bottom: 4px solid var(--purple);
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info i {
+    color: var(--purple);
+    font-size: 20px;
+    width: 25px;
+}
+
+/* Redes Sociales en Footer */
+.social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--text-gray);
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--purple);
+    transform: translateY(-5px);
+}
+
+/* Ajuste para el botón secundario en modo Hero */
+.btn-secondary:hover {
+    background-color: var(--purple);
+    color: white;
+    transition: 0.3s;
+}
+.save-btn {
+  background: rgb(22, 53, 95)0;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 1px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+}
