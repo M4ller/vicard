@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre</title>
+    <title>ViCARD - Felipe Saez</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
 
     <header class="header">
-        <div class="logo">Vi<span>CARD</span></div>
+       <div class="logo">
+    <a href="https://www.vicard.cl" style="text-decoration: none; color: inherit;">
+        Vi<span>CARD</span>
+    </a>
+    </div>
         <nav class="nav" id="nav-menu">
-            <a href="#">Inicio</a>
+            <a href="/index.html">Inicio</a>
           <!--  <a href="#cursos">Cursos</a> -->
             <a href="#contacto">Contacto</a>
         </nav>
@@ -24,7 +28,7 @@
 
 <section class="hero">
             <div class="hero-image">
-            <img src="/ViCard.png" alt="Hero Image">
+            <img src="ViCard.png" alt="Hero Image">
             </div>
         <div class="hero-content">
             <h1>Felipe<span> <br>Saez Morales</span></h1>
@@ -32,7 +36,7 @@
 
             <div class="buttons">
                 <a href="mailto:felipe.saezm@gmail.com" class="btn-primary">Contactame!</a>
-                <a href="#contacto" class="btn-secondary">Saber más</a>
+                <a href="#contacto" class="btn-secondary">Agregame</a>
             </div>
         </div>
 
@@ -55,9 +59,17 @@
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
+<div>    
+    <!-- =====================================
+         BOTÓN PARA AGREGAR CONTACTO
+    ====================================== -->
+    <button class="save-btn" onclick="saveContact()">
+      Agregame a tu lista de contactos
+    </button></div>
+
         <p>&copy; 2026 Desing Loft Store - Todos los derechos reservados</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
