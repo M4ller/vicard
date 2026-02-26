@@ -50,7 +50,7 @@ END:VCARD
   // Crear enlace temporal
   const link = document.createElement("a");
   link.href = URL.createObjectURL(blob);
-  link.download = "maria.andreavcf";
+  link.download = "RichardGallardoRivera.vcf";
 
   // Forzar descarga
   link.click();

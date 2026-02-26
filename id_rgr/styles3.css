@@ -150,8 +150,11 @@ Botones
 Imagen Hero
 ======== */
 .hero-image img {
-    width: 350px;
-    border-radius: 180px;
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0px;
+    border-radius: 380px;
 }
 
 /* ========
