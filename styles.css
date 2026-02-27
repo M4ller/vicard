@@ -35,7 +35,7 @@ Header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 10px;
     background-color: var(--bg-secondary);
 }
 
@@ -85,7 +85,7 @@ Hero Section
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 8%;
+    padding: 10px;
     gap: 40px;
 }
 
@@ -156,7 +156,7 @@ Sección estadísticas
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding: 60px 8%;
+    padding: 10px;
     background-color: var(--bg-secondary);
 }
 
@@ -169,7 +169,7 @@ Sección estadísticas
 Cursos
 ======== */
 .courses {
-    padding: 80px 8%;
+    padding: 10px;
     text-align: center;
 }
 
@@ -216,7 +216,7 @@ Cursos
 Footer
 ======== */
 .footer {
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     background-color: #111;
     color: var(--text-gray);
