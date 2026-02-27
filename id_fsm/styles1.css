@@ -35,7 +35,7 @@ Header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 10px 8%;
     background-color: var(--bg-secondary);
 }
 
@@ -161,7 +161,7 @@ Sección estadísticas
     display: flex;
     justify-content: center;
     gap: 60px;
-    padding: 60px 8%;
+    padding: 10px 8%;
     background-color: var(--bg-secondary);
 }
 
@@ -279,6 +279,7 @@ Nuevos estilos: Contacto y Social
 }
 
 .contact-container {
+    padding: 5px;
     display: flex;
     justify-content: center;
 }
