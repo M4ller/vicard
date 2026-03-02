@@ -200,23 +200,14 @@ Sección Tarjetas
     border-radius: 5px;
 }
 
-/* ========
-Sección Contacto / QR
-======== */
-.seccion-contacto {
-    padding: 10px;
-    text-align: center;
-    background-color: var(--fondo-secundario);
-}
-
-.contenedor-contacto {
+/* ===============================
+Codugo QR
+=============================== */
+.codigo-qr {
     display: flex;
     justify-content: center;
-}
-
-.info-contacto p {
-    margin-top: 15px;
-    color: var(--texto-gris);
+    margin-top: 20px;
+    justify-content: center;
 }
 
 /* ========
