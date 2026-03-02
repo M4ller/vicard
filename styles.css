@@ -2,12 +2,12 @@
 Variables globales de color
 ======== */
 :root {
-    --bg-dark: #0f0f14;
-    --bg-secondary: #181820;
-    --purple: #2979FF;
-    --purple-hover: #1565C0;
-    --text-light: #ffffff;
-    --text-gray: #b3b3b3;
+    --fondo-oscuro: #0f0f14;
+    --fondo-secundario: #181820;
+    --color-principal: #2979FF;
+    --color-principal-hover: #1565C0;
+    --texto-claro: #ffffff;
+    --texto-gris: #b3b3b3;
 }
 
 /* ========
@@ -24,19 +24,19 @@ Estilo general del body
 ======== */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-claro);
 }
 
 /* ========
-Header
+Encabezado
 ======== */
-.header {
+.encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: var(--bg-secondary);
+    padding: 15px;
+    background-color: var(--fondo-secundario);
 }
 
 /* ========
@@ -48,132 +48,119 @@ Logo
 }
 
 .logo span {
-    color: var(--purple);
+    color: var(--color-principal);
 }
 
 /* ========
 Navegación
 ======== */
-.nav {
+.navegacion {
     display: flex;
     gap: 30px;
 }
 
-.nav a {
+.navegacion a {
     text-decoration: none;
-    color: var(--text-gray);
+    color: var(--texto-gris);
     transition: 0.3s;
 }
 
-.nav a:hover {
-    color: var(--purple);
+.navegacion a:hover {
+    color: var(--color-principal);
 }
 
 /* ========
-Botón hamburguesa
+Botón menú hamburguesa
 ======== */
-.menu-toggle {
+.boton-menu {
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
 
 /* ========
-Hero Section
+Sección principal
 ======== */
-.hero {
+.seccion-principal {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 40px;
     gap: 40px;
 }
 
 /* ========
-Contenido Hero
+Contenido principal
 ======== */
-.hero-content {
+.contenido-principal {
     max-width: 500px;
 }
 
-.hero-content h1 {
+.contenido-principal h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.hero-content span {
-    color: var(--purple);
+.contenido-principal span {
+    color: var(--color-principal);
 }
 
-.hero-content p {
-    color: var(--text-gray);
+.contenido-principal p {
+    color: var(--texto-gris);
     margin-bottom: 30px;
 }
 
 /* ========
 Botones
 ======== */
-.buttons {
+.grupo-botones {
     display: flex;
     gap: 15px;
     justify-content: center;
 }
 
-.btn-primary {
-    background-color: var(--purple);
+.boton-primario {
+    background-color: var(--color-principal);
     border: none;
     padding: 12px 25px;
     color: white;
     cursor: pointer;
     transition: 0.3s;
     text-decoration: none;
+    border-radius: 5px;
 }
 
-.btn-primary:hover {
-    background-color: var(--purple-hover);
+.boton-primario:hover {
+    background-color: var(--color-principal-hover);
 }
 
-.btn-secondary {
+.boton-secundario {
     background: transparent;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--color-principal);
     padding: 12px 25px;
-    color: var(--purple);
+    color: var(--color-principal);
     cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 /* ========
-Imagen Hero
+Imagen principal
 ======== */
-.hero-image img {
+.imagen-principal img {
     width: 350px;
     border-radius: 500px;
 }
 
 /* ========
-Sección estadísticas
+Sección Tarjetas
 ======== */
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    padding: 10px;
-    background-color: var(--bg-secondary);
-}
-
-.stat-box h2 {
-    color: var(--purple);
-    font-size: 32px;
-}
-
-/* ========
-Cursos
-======== */
-.courses {
-    padding: 10px;
+.seccion-tarjetas {
+    padding: 40px;
     text-align: center;
 }
 
-.course-grid {
+.rejilla-tarjetas {
     display: flex;
     gap: 30px;
     margin-top: 20px;
@@ -181,45 +168,65 @@ Cursos
     flex-wrap: wrap;
 }
 
-.course-card {
-    background-color: var(--bg-secondary);
+.tarjeta-item {
+    background-color: var(--fondo-secundario);
     width: 280px;
     border-radius: 10px;
     transition: 0.3s;
     overflow: hidden;
 }
 
-.course-card img {
+.tarjeta-item img {
     width: 100%;
     display: block;
 }
 
-.course-card-content {
+.contenido-tarjeta {
     padding: 30px;
 }
 
-.course-card:hover {
+.tarjeta-item:hover {
     transform: translateY(-10px);
-    border: 1px solid var(--purple);
+    border: 1px solid var(--color-principal);
 }
 
-.course-card button {
+.tarjeta-item button {
     margin-top: 20px;
-    background-color: var(--purple);
+    background-color: var(--color-principal);
     border: none;
     padding: 10px 20px;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* ========
-Footer
+Sección Contacto / QR
 ======== */
-.footer {
-    padding: 10px;
+.seccion-contacto {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--fondo-secundario);
+}
+
+.contenedor-contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.info-contacto p {
+    margin-top: 15px;
+    color: var(--texto-gris);
+}
+
+/* ========
+Pie de página
+======== */
+.pie-pagina {
+    padding: 20px;
     text-align: center;
     background-color: #111;
-    color: var(--text-gray);
+    color: var(--texto-gris);
 }
 
 /* ========
@@ -227,19 +234,13 @@ Responsive - Tablet y móvil
 ======== */
 @media (max-width: 900px) {
 
-    .hero {
+    .seccion-principal {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-image img {
+    .imagen-principal img {
         width: 250px;
-    }
-
-    .stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
     }
 }
 
@@ -248,22 +249,22 @@ Responsive - móvil pequeño
 ======== */
 @media (max-width: 600px) {
 
-    .nav {
+    .navegacion {
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: var(--bg-secondary);
+        background-color: var(--fondo-secundario);
         flex-direction: column;
         width: 200px;
         padding: 20px;
         display: none;
     }
 
-    .nav.active {
+    .navegacion.activo {
         display: flex;
     }
 
-    .menu-toggle {
+    .boton-menu {
         display: block;
     }
 }

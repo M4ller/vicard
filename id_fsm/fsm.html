@@ -4,84 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ViCARD - Felipe Saez</title>
+
+    <!-- Fuente Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
 
-    <header class="header">
-       <div class="logo">
-    <a href="https://www.vicard.cl" style="text-decoration: none; color: inherit;">
-        Vi<span>CARD</span>
-    </a>
-    </div>
-        <nav class="nav" id="nav-menu">
+    <!-- ============================= -->
+    <!-- Encabezado -->
+    <!-- ============================= -->
+    <header class="encabezado">
+
+        <div class="logo">
+            <a href="https://www.vicard.cl" style="text-decoration: none; color: inherit;">
+                Vi<span>CARD</span>
+            </a>
+        </div>
+
+        <nav class="navegacion" id="menu-navegacion">
             <a href="/index.html">Inicio</a>
-          <!--  <a href="#cursos">Cursos</a> -->
-            <a href="#contacto">Contacto</a>
+            <a href="#seccion-contacto">Contacto</a>
         </nav>
-        <div class="menu-toggle" id="mobile-menu">
+
+        <div class="boton-menu" id="boton-menu">
             <i class="fas fa-bars"></i>
         </div>
+
     </header>
 
-<section class="hero">
-            <div class="hero-image">
-            <img src="ViCard.png" alt="Hero Image">
-            </div>
-        <div class="hero-content">
-            <h1>Felipe<span> <br>Saez Morales</span></h1>
-            <p>Desarrollador Full Stack | Apasionado por la tecnología y la innovación tecnológica.</p>
+    <!-- ============================= -->
+    <!-- Sección Principal -->
+    <!-- ============================= -->
+    <section class="seccion-principal">
 
-            <div class="buttons">
-                <a href="mailto:felipe.saezm@gmail.com" class="btn-primary">Contactame!</a>
-                <a href="#contacto" class="btn-secondary">Agregame</a>
+        <div class="imagen-principal">
+            <img src="ViCard.png" alt="Imagen representativa de tarjeta digital">
+        </div>
+
+        <div class="contenido-principal">
+            <h1>Felipe<br><span>Saez Morales</span></h1>
+            <p>
+                Desarrollador Full Stack | Apasionado por la tecnología y la innovación.
+            </p>
+
+            <div class="grupo-botones">
+                <a href="mailto:felipe.saezm@gmail.com" class="boton-primario">
+                    Contáctame
+                </a>
+                <a href="#seccion-contacto" class="boton-secundario">
+                    Agrégame
+                </a>
             </div>
         </div>
-</section>
 
+    </section>
 
-    <section id="contacto" class="contact-section">
-        <h2>Contacto</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><i class="fas fa-user"></i> <strong>Nombre:</strong> </p> <p>Felipe Saez Morales</p>
-                <p><i class="fas fa-envelope"></i> <strong>Correo:</strong> </p> <p>felipe.saezm@gmail.com</p>
-                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> </p> <p>+56993132047</p>
-                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/56993132047" target="_blank"> </p>+56993132047</a></p>
+    <!-- ============================= -->
+    <!-- Sección Contacto -->
+    <!-- ============================= -->
+    <section id="seccion-contacto" class="seccion-contacto">
+        <h2>Información de contacto</h2>
+
+        <div class="contenedor-contacto">
+            <div class="info-contacto">
+
+                <p>
+                    <i class="fas fa-user"></i>
+                    <strong>Nombre:</strong> Felipe Saez Morales
+                </p>
+
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <strong>Correo:</strong>
+                    <a href="mailto:felipe.saezm@gmail.com">
+                        felipe.saezm@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <strong>Teléfono:</strong>
+                    <a href="tel:+56993132047">
+                        +56 9 9313 2047
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/56993132047" target="_blank">
+                        +56 9 9313 2047
+                    </a>
+                </p>
+
             </div>
         </div>
     </section>
 
-    <section id="qr" class="contact-section">
-<!--        <h2>Código QR</h2> -->
-        <div class="contact-container">
-            <div class="contact-info" style="text-align: center;">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://fsm.vicard.cl/" alt="QR Code" style="border-radius: 10px;">
-                <p style="justify-content: center;">Escanea para visitar</p>
+    <!-- ============================= -->
+    <!-- Sección QR -->
+    <!-- ============================= -->
+    <section id="codigo-qr" class="seccion-codigoQR">
+
+        <div class="contenedor-contacto">
+            <div class="info-contacto" style="text-align:center;">
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://fsm.vicard.cl/"
+                     alt="Código QR de contacto"
+                     style="border-radius: 10px;">
+
+                <p>Escanea para visitar mi perfil digital</p>
+
             </div>
         </div>
+
     </section>
 
-    <footer class="footer">
-        <div class="social-icons">
+    <!-- ============================= -->
+    <!-- Pie de Página -->
+    <!-- ============================= -->
+    <footer class="pie-pagina">
+
+        <div class="iconos-sociales">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-<div>    
-    <!-- =====================================
-         BOTÓN PARA AGREGAR CONTACTO
-    ====================================== -->
-    <button class="save-btn" onclick="saveContact()">
-      Agregame a tu lista de contactos
-    </button></div>
 
-        <p>&copy; 2026 Desing Loft Store - Todos los derechos reservados</p>
+        <!-- Botón guardar contacto -->
+        <div>
+            <button class="boton-guardar" onclick="guardarContacto()">
+                Agrégame a tu lista de contactos
+            </button>
+        </div>
+
+        <p>&copy; 2026 Design Loft Store - Todos los derechos reservados</p>
+
     </footer>
 
+    <!-- Script -->
     <script src="script1.js"></script>
+
 </body>
 </html>

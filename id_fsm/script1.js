@@ -1,63 +1,100 @@
+// ==========================================
+// INICIALIZACIÓN CUANDO EL DOM ESTÁ LISTO
+// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // --- Lógica del Menú Mobile ---
-    const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
 
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+    inicializarMenuMovil();
+    inicializarAnimacionScroll();
+
+});
+
+
+// ==========================================
+// MENÚ MÓVIL
+// ==========================================
+function inicializarMenuMovil() {
+
+    const botonMenu = document.getElementById("boton-menu");
+    const menuNavegacion = document.getElementById("menu-navegacion");
+
+    if (!botonMenu || !menuNavegacion) return;
+
+    botonMenu.addEventListener("click", () => {
+        menuNavegacion.classList.toggle("activo");
     });
 
-    // --- Animación de Scroll (Intersection Observer) ---
-    const cards = document.querySelectorAll(".course-card, .contact-info");
+    // Cerrar menú al hacer click en enlace (mejor UX)
+    const enlaces = menuNavegacion.querySelectorAll("a");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
+    enlaces.forEach(enlace => {
+        enlace.addEventListener("click", () => {
+            menuNavegacion.classList.remove("activo");
         });
+    });
+}
+
+
+// ==========================================
+// ANIMACIÓN DE SCROLL (Intersection Observer)
+// ==========================================
+function inicializarAnimacionScroll() {
+
+    const elementosAnimados = document.querySelectorAll(".info-contacto");
+
+    if (!elementosAnimados.length) return;
+
+    const observador = new IntersectionObserver((entradas, observador) => {
+
+        entradas.forEach(entrada => {
+
+            if (entrada.isIntersecting) {
+
+                entrada.target.style.opacity = "1";
+                entrada.target.style.transform = "translateY(0)";
+                observador.unobserve(entrada.target); // Optimización
+
+            }
+
+        });
+
     }, { threshold: 0.2 });
 
-    cards.forEach(card => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(40px)";
-        card.style.transition = "0.8s ease-out";
-        observer.observe(card);
-    });
-});
-/* =========================================
-   FUNCIÓN PARA GUARDAR CONTACTO (VCARD)
-========================================= */
-function saveContact() {
+    elementosAnimados.forEach(elemento => {
 
-  // Contenido del archivo VCF
-  const vcard = `
+        elemento.style.opacity = "0";
+        elemento.style.transform = "translateY(40px)";
+        elemento.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+
+        observador.observe(elemento);
+
+    });
+}
+
+
+// ==========================================
+// FUNCIÓN PARA GUARDAR CONTACTO (VCARD)
+// ==========================================
+function guardarContacto() {
+
+    const contenidoVCard = `
 BEGIN:VCARD
 VERSION:3.0
 FN:Felipe Saez Morales
-TITLE: CEO
+TITLE:Desarrollador Full Stack
 TEL:+56993132047
-EMAIL:designloftstore@gmail.com
+EMAIL:felipe.saezm@gmail.com
 URL:https://vicard.cl
 END:VCARD
 `;
 
-  // Crear archivo descargable
-  const blob = new Blob([vcard], { type: "text/vcard" });
+    const archivo = new Blob([contenidoVCard], { type: "text/vcard;charset=utf-8" });
 
-  // Crear enlace temporal
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "Felipe Saez.vcf";
+    const enlaceDescarga = document.createElement("a");
+    enlaceDescarga.href = URL.createObjectURL(archivo);
+    enlaceDescarga.download = "Felipe_Saez_Morales.vcf";
 
-  // Forzar descarga
-  link.click();
+    document.body.appendChild(enlaceDescarga);
+    enlaceDescarga.click();
+    document.body.removeChild(enlaceDescarga);
+
 }
-
-const express = require("express");
-const QRCode = require("qrcode");
-
-const app = express();
-const PORT = 3000;

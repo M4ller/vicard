@@ -1,34 +1,37 @@
 // ========
-// Animación simple al hacer scroll
-// Hace que los cursos aparezcan suavemente
+// Animación al hacer scroll
+// Hace que las tarjetas aparezcan suavemente
 // ========
 document.addEventListener("DOMContentLoaded", () => {
 
-    const cards = document.querySelectorAll(".course-card");
+    const tarjetas = document.querySelectorAll(".tarjeta-item");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+    const observador = new IntersectionObserver(entradas => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.style.opacity = "1";
+                entrada.target.style.transform = "translateY(0)";
             }
         });
     }, { threshold: 0.3 });
 
-    cards.forEach(card => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(40px)";
-        card.style.transition = "0.6s ease";
-        observer.observe(card);
+    tarjetas.forEach(tarjeta => {
+        tarjeta.style.opacity = "0";
+        tarjeta.style.transform = "translateY(40px)";
+        tarjeta.style.transition = "0.6s ease";
+        observador.observe(tarjeta);
     });
 
+    // ========
     // Menú hamburguesa para móvil
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
+    // ========
+    const botonMenu = document.getElementById("boton-menu");
+    const menuNavegacion = document.getElementById("menu-navegacion");
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
+    if (botonMenu && menuNavegacion) {
+        botonMenu.addEventListener("click", () => {
+            menuNavegacion.classList.toggle("activo");
         });
     }
+
 });
