@@ -35,7 +35,7 @@ Encabezado
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     background-color: var(--fondo-secundario);
 }
 
@@ -85,7 +85,7 @@ Sección principal
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 10px;
     gap: 40px;
 }
 
@@ -156,7 +156,7 @@ Imagen principal
 Sección Tarjetas
 ======== */
 .seccion-tarjetas {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -182,7 +182,7 @@ Sección Tarjetas
 }
 
 .contenido-tarjeta {
-    padding: 30px;
+    padding: 10px;
 }
 
 .tarjeta-item:hover {
@@ -204,7 +204,7 @@ Sección Tarjetas
 Sección Contacto / QR
 ======== */
 .seccion-contacto {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     background-color: var(--fondo-secundario);
 }
@@ -223,7 +223,7 @@ Sección Contacto / QR
 Pie de página
 ======== */
 .pie-pagina {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: #111;
     color: var(--texto-gris);
@@ -256,7 +256,7 @@ Responsive - móvil pequeño
         background-color: var(--fondo-secundario);
         flex-direction: column;
         width: 200px;
-        padding: 20px;
+        padding: 10px;
         display: none;
     }
 
@@ -266,5 +266,11 @@ Responsive - móvil pequeño
 
     .boton-menu {
         display: block;
+    }
+
+    .seccion-principal,
+    .seccion-tarjetas,
+    .seccion-contacto {
+        padding: 10px;
     }
 }

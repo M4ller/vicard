@@ -35,7 +35,7 @@ Encabezado
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     background-color: var(--fondo-secundario);
 }
 
@@ -82,7 +82,7 @@ Sección principal
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 10px;
     gap: 40px;
 }
 
@@ -142,12 +142,12 @@ Botones
 Sección Contacto
 =============================== */
 .seccion-contacto {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     background-color: var(--fondo-oscuro);
 }
 .seccion-codigoQR {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     background-color: var(--fondo-oscuro);
     justify-items: center;
@@ -164,7 +164,7 @@ Sección Contacto
 
 .info-contacto {
     background-color: var(--fondo-secundario);
-    padding: 40px;
+    padding: 10px;
     border-radius: 15px;
     width: 100%;
     max-width: 500px;
@@ -252,7 +252,7 @@ Botón Guardar Contacto
 Pie de página
 =============================== */
 .pie-pagina {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background-color: #111;
     color: var(--texto-gris);
@@ -271,12 +271,6 @@ Responsive - Tablet
     .imagen-principal img {
         width: 250px;
     }
-}
-
-/* ===============================
-Responsive - Móvil
-=============================== */
-@media (max-width: 600px) {
 
     .navegacion {
         position: absolute;
@@ -285,7 +279,7 @@ Responsive - Móvil
         background-color: var(--fondo-secundario);
         flex-direction: column;
         width: 200px;
-        padding: 20px;
+        padding: 10px;
         display: none;
     }
 
@@ -295,5 +289,24 @@ Responsive - Móvil
 
     .boton-menu {
         display: block;
+    }
+}
+
+/* ===============================
+Responsive - Móvil Pequeño
+=============================== */
+@media (max-width: 600px) {
+    .seccion-principal,
+    .seccion-contacto,
+    .seccion-codigoQR {
+        padding: 10px;
+    }
+
+    .info-contacto {
+        padding: 10px;
+    }
+
+    .contenido-principal h1 {
+        font-size: 36px;
     }
 }

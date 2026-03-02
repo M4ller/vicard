@@ -188,7 +188,7 @@ Cursos
 
 .course-card {
     background-color: var(--bg-secondary);
-    padding: 30px;
+    padding: 10px;
     width: 280px;
     border-radius: 10px;
     transition: 0.3s;
@@ -251,7 +251,7 @@ Responsive - móvil pequeño
         background-color: var(--bg-secondary);
         flex-direction: column;
         width: 200px;
-        padding: 20px;
+        padding: 10px;
         display: none;
     }
 
@@ -261,6 +261,10 @@ Responsive - móvil pequeño
 
     .menu-toggle {
         display: block;
+    }
+
+    .contact-info {
+        padding: 10px;
     }
 }
 /* ======== 
@@ -285,7 +289,7 @@ Nuevos estilos: Contacto y Social
 
 .contact-info {
     background-color: var(--bg-secondary);
-    padding: 40px;
+    padding: 10px;
     border-radius: 15px;
     width: 100%;
     max-width: 500px;
