@@ -190,7 +190,8 @@ Sección Tarjetas
     border: 1px solid var(--color-principal);
 }
 
-.tarjeta-item button {
+.boton-tarjeta {
+    display: inline-block;
     margin-top: 20px;
     background-color: var(--color-principal);
     border: none;
@@ -198,16 +199,16 @@ Sección Tarjetas
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 /* ===============================
-Codugo QR
+Código QR
 =============================== */
-.codigo-qr {
+.seccion-codigo-qr {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    justify-content: center;
 }
 
 /* ========
